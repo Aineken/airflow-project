@@ -1,3 +1,4 @@
+
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -260,6 +261,9 @@ services:
     user: "0:0"
     volumes:
       - ${AIRFLOW_PROJ_DIR:-.}:/sources
+      - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags  # Maps the local DAGs directory to the container
+      - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs  # Maps the local logs directory
+      - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
 
   airflow-cli:
     <<: *airflow-common

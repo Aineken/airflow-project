@@ -1,0 +1,5 @@
+home/airflow/.local/lib/
+
+__pycache__
+*.pyc
+temp/
