@@ -8,7 +8,7 @@ DROP table IF EXISTS public.staging_events;
 
 DROP table IF EXISTS public.staging_songs;
 
-DROP table IF EXISTS public."time";
+DROP table IF EXISTS public.time;
 
 DROP table IF EXISTS public.users;
 
@@ -24,7 +24,7 @@ CREATE TABLE public.songplays (
 	playid varchar(32) NOT NULL,
 	start_time timestamp NOT NULL,
 	userid int4 NOT NULL,
-	"level" varchar(256),
+	level varchar(256),
 	songid varchar(256),
 	artistid varchar(256),
 	sessionid int4,
@@ -37,7 +37,7 @@ CREATE TABLE public.songs (
 	songid varchar(256) NOT NULL,
 	title varchar(512),
 	artistid varchar(256),
-	"year" int4,
+	year int4,
 	duration numeric(18,0),
 	CONSTRAINT songs_pkey PRIMARY KEY (songid)
 );
@@ -50,9 +50,9 @@ CREATE TABLE public.staging_events (
 	iteminsession int4,
 	lastname varchar(256),
 	length numeric(18,0),
-	"level" varchar(256),
+	level varchar(256),
 	location varchar(256),
-	"method" varchar(256),
+	method varchar(256),
 	page varchar(256),
 	registration numeric(18,0),
 	sessionid int4,
@@ -73,16 +73,16 @@ CREATE TABLE public.staging_songs (
 	song_id varchar(256),
 	title varchar(512),
 	duration numeric(18,0),
-	"year" int4
+	year int4
 );
 
-CREATE TABLE public."time" (
+CREATE TABLE public.time (
 	start_time timestamp NOT NULL,
-	"hour" int4,
-	"day" int4,
+	hour int4,
+	day int4,
 	week int4,
-	"month" varchar(256),
-	"year" int4,
+	month varchar(256),
+	year int4,
 	weekday varchar(256),
 	CONSTRAINT time_pkey PRIMARY KEY (start_time)
 ) ;
@@ -92,6 +92,6 @@ CREATE TABLE public.users (
 	first_name varchar(256),
 	last_name varchar(256),
 	gender varchar(256),
-	"level" varchar(256),
+	level varchar(256),
 	CONSTRAINT users_pkey PRIMARY KEY (userid)
 );

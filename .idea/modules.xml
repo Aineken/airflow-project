@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/cd12380-data-pipelines-with-airflow.iml" filepath="$PROJECT_DIR$/.idea/cd12380-data-pipelines-with-airflow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/data-pipelines-with-airflow.iml" filepath="$PROJECT_DIR$/.idea/data-pipelines-with-airflow.iml" />
     </modules>
   </component>
 </project>
